@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syed Javid — UI/UX Product Engineer</title>
+  <meta name="description"
+    content="Product Engineer who builds for real users. 1700+ active users, 3 shipped products, VIT CS undergrad. Specializing in UX-driven engineering." />
+  <meta name="keywords" content="Syed Javid, UI UX designer, product engineer, CollegePrep, portfolio, VIT" />
+  <meta property="og:title" content="Syed Javid — UI/UX Product Engineer" />
+  <meta property="og:description"
+    content="Product Engineer who builds products people actually use. 1700+ active users." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    .hero-animate {
+      opacity: 0;
+      animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .hero-in {
+      opacity: 1;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: var(--accent-violet);
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+      margin-left: 2px;
+      border-radius: 1px;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════ UX LOADER ═══════════════════════════════ -->
+  <noscript>
+    <style>
+      .ux-loader {
+        display: none;
+      }
+
+      body.locked {
+        overflow: visible;
+      }
+    </style>
+  </noscript>
+
+  <div id="ux-loader" class="ux-loader" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <div class="loader-content">
+      <div class="loader-logo">SYED JAVID PORTFOLIO...</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"></div>
+      </div>
+      <div class="loader-text" id="loader-text">Initializing Systems...</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ NAVIGATION ═══════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <div class="nav-socials" aria-label="Social links">
+        <a href="mailto:syedjavid188@gmail.com" aria-label="Email" title="Email" class="nav-social-icon icon-violet">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"
+          class="nav-social-icon icon-cyan">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://github.com/syedjavid188" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"
+          class="nav-social-icon icon-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="tel:+917330767615" aria-label="Phone" title="Phone" class="nav-social-icon icon-neutral">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Case Studies</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-left">
+        <div class="hero-label hero-animate">
+          <span class="hero-label-dot"></span>
+          Available for Internships &amp; Roles
+        </div>
+        <h1 class="hero-headline hero-animate">
+          <span class="line-1">I build</span><br>
+          <span class="line-2"><span id="typing-text">products people actually use.</span><span class="cursor"
+              aria-hidden="true"></span></span>
+        </h1>
+        <p class="hero-sub hero-animate">
+          CS undergrad at <strong>Vellore Institute of Technology</strong> (CGPA 8.6) who thinks in systems, designs for
+          humans, and
+          ships production-grade products. My work has reached <strong>1700+ active users</strong> across 3 real-world
+          platforms.
+        </p>
+        <div class="hero-actions hero-animate">
+          <a href="#work" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+            View Case Studies
+          </a>
+          <a href="mailto:syedjavid188@gmail.com" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            Get in Touch
+          </a>
+        </div>
+        <div class="hero-meta hero-animate">
+          <div class="hero-meta-item">
+            <span class="hero-meta-value">1700+</span>
+            <span class="hero-meta-label">Active Users</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-value">3</span>
+            <span class="hero-meta-label">Live Products</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-value">8.6</span>
+            <span class="hero-meta-label">CGPA @ VIT</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-value">Top 5</span>
+            <span class="hero-meta-label">Nationwide</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-visual">
+          <!-- Floating badge top-right -->
+          <div class="hero-float-card hero-float-card-1">
+            <div class="float-card-icon">🏆</div>
+            <div class="float-card-text">National Finalist</div>
+            <div class="float-card-sub">CTRL+SPACE Hackathon</div>
+          </div>
+          <!-- Main Power UI/UX Dashboard Card -->
+          <div class="hero-card-main">
+            <!-- Top nav area -->
+            <div class="hero-card-header" style="margin-bottom:var(--space-md); padding-bottom:var(--space-sm);">
+              <div class="hero-avatar" style="width:44px; height:44px; font-size:1.1rem;">SJ</div>
+              <div>
+                <div class="hero-card-name" style="font-size:1rem;">Syed Javid</div>
+                <div class="hero-card-role" style="font-size:0.75rem;">UI/UX Product Engineer</div>
+              </div>
+              <div class="hero-status" style="font-size:0.65rem;"><span class="status-dot"></span>Available</div>
+            </div>
+
+            <!-- Featured Live Platform Block -->
+            <div class="dashboard-block"
+              style="background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(0,0,0,0.2)); border:1px solid rgba(255,255,255,0.05); border-radius:var(--radius-md); padding:var(--space-lg); position:relative; overflow:hidden;">
+              <!-- Subtle gradient glow behind the chart -->
+              <div
+                style="position:absolute; bottom:-20px; right:-20px; width:100px; height:100px; background:var(--accent-violet-glow); filter:blur(40px); opacity:0.6; z-index:0;">
+              </div>
+
+              <div class="df-top"
+                style="display:flex; justify-content:space-between; align-items:center; position:relative; z-index:1;">
+                <span class="block-label"
+                  style="font-size:0.65rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; font-weight:600;">Live
+                  Platform Growth</span>
+                <span class="tag tag-green"
+                  style="font-size:0.55rem; padding:2px 8px; font-family:var(--font-mono);">CollegePrep</span>
+              </div>
+
+              <div class="metric-val"
+                style="font-family:var(--font-display); font-size:2.4rem; line-height:1; font-weight:800; color:var(--text-primary); margin:12px 0 4px; position:relative; z-index:1;">
+                1,700<span style="color:var(--accent-cyan);">+</span>
+              </div>
+              <div class="metric-label"
+                style="font-size:0.75rem; color:var(--text-secondary); font-weight:500; position:relative; z-index:1;">
+                Active Student Users</div>
+
+              <!-- Mini Analytics Chart -->
+              <div class="mini-chart"
+                style="display:flex; align-items:flex-end; gap:6px; height:45px; margin-top:20px; position:relative; z-index:1;">
+                <div
+                  style="flex:1; background:var(--accent-violet-soft); border-radius:3px 3px 0 0; height:35%; transition:height 0.3s ease;">
+                </div>
+                <div style="flex:1; background:var(--accent-violet-soft); border-radius:3px 3px 0 0; height:50%;"></div>
+                <div style="flex:1; background:var(--accent-violet-soft); border-radius:3px 3px 0 0; height:45%;"></div>
+                <div style="flex:1; background:var(--accent-violet-soft); border-radius:3px 3px 0 0; height:75%;"></div>
+                <div
+                  style="flex:1; background:linear-gradient(to top, var(--accent-violet-soft), var(--accent-violet)); border-radius:3px 3px 0 0; height:100%; position:relative;">
+                  <!-- Pulsing node at the top of the highest bar -->
+                  <div
+                    style="position:absolute; top:-6px; left:50%; width:8px; height:8px; background:var(--accent-cyan); border-radius:50%; transform:translateX(-50%); box-shadow:0 0 12px var(--accent-cyan); animation:pulse 2s infinite;">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary Stats Grid -->
+            <div class="hero-stats-grid" style="margin-top:var(--space-md); margin-bottom:0;">
+              <div class="hero-stat"
+                style="padding:16px 10px; border-color:rgba(255,255,255,0.05); background:rgba(0,0,0,0.15); display:flex; flex-direction:column; align-items:center;">
+                <div style="font-size:1.2rem; margin-bottom:4px; opacity:0.8;">🚀</div>
+                <div class="hero-stat-val" style="font-size:1.2rem; line-height:1;">3</div>
+                <div class="hero-stat-label" style="font-size:0.6rem; color:var(--text-muted);">Products</div>
+              </div>
+              <div class="hero-stat"
+                style="padding:16px 10px; border-color:rgba(255,255,255,0.05); background:rgba(0,0,0,0.15); display:flex; flex-direction:column; align-items:center;">
+                <div style="font-size:1.2rem; margin-bottom:4px; opacity:0.8;">👥</div>
+                <div class="hero-stat-val" style="font-size:1.2rem; line-height:1;">3K+</div>
+                <div class="hero-stat-label" style="font-size:0.6rem; color:var(--text-muted);">Community</div>
+              </div>
+              <div class="hero-stat"
+                style="padding:16px 10px; border-color:rgba(255,255,255,0.05); background:rgba(0,0,0,0.15); display:flex; flex-direction:column; align-items:center;">
+                <div style="font-size:1.2rem; margin-bottom:4px; opacity:0.8;">🎓</div>
+                <div class="hero-stat-val" style="font-size:1.2rem; line-height:1;">8.6</div>
+                <div class="hero-stat-label" style="font-size:0.6rem; color:var(--text-muted);">CGPA</div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating badge bottom-left -->
+          <div class="hero-float-card hero-float-card-2">
+            <div class="float-card-icon">🎓</div>
+            <div class="float-card-text">CGPA 8.6</div>
+            <div class="float-card-sub">B.Tech CSE · VIT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" role="button" aria-label="Scroll to about section" tabindex="0">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+  <section id="about" class="section" aria-label="About">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Engineering with <span class="gradient-text">empathy.</span></h2>
+          <blockquote class="about-quote">"Good design is invisible. Great engineering makes it inevitable."
+          </blockquote>
+          <p>I'm a Computer Science undergraduate at Vellore Institute of Technology (CGPA 8.6) who doesn't just write
+            code — I build
+            products that solve real problems for real people. My approach sits at the intersection of systems thinking
+            and user empathy.</p>
+          <p>I founded <strong style="color:var(--text-primary)">CollegePrep</strong>, a student platform now serving
+            1700+ active users and 3000+ community members. I didn't just build features — I interviewed students,
+            identified friction points, and shipped tools that reduced exam anxiety.</p>
+          <p>My engineering decisions are always framed by a question: <em style="color:var(--accent-violet)">"Does this
+              make the user's life meaningfully better?"</em></p>
+          <div style="margin-top:var(--space-xl); display:flex; gap:var(--space-md); flex-wrap:wrap;">
+            <span class="tag tag-violet">🎯 Product Thinking</span>
+            <span class="tag tag-cyan">⚡ Frontend Engineering</span>
+            <span class="tag tag-green">👥 Community Building</span>
+            <span class="tag tag-neutral">📐 Systems Design</span>
+          </div>
+        </div>
+
+        <div class="about-timeline reveal-right">
+          <div class="profile-card-wrapper" style="margin-bottom: var(--space-2xl);">
+            <div class="profile-card">
+              <div class="profile-img-wrap">
+                <img src="assets/profile.png" alt="Syed Javid Profile Photo" class="profile-img">
+                <div class="profile-glow"></div>
+              </div>
+              <div class="profile-info">
+                <h3 class="profile-name">Syed Javid</h3>
+                <div class="profile-role">Product Engineer</div>
+                <div class="profile-status">
+                  <span class="status-dot"></span> Building CollegePrep
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-line" style="top: 180px;"></div>
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot">🎓</div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">AUG 2022 – APR 2024</div>
+              <div class="timeline-title">Sri Abhida Junior College</div>
+              <div class="timeline-desc">Class XII — 97.0%. Developed a love for problem-solving and logical thinking
+                that drove the leap into Computer Science.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot">💻</div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">JUL 2024 – PRESENT</div>
+              <div class="timeline-title">B.Tech CSE @ Vellore Institute of Technology</div>
+              <div class="timeline-desc">CGPA 8.6. Immersed in DSA, Web Dev, DBMS, AI, and Android. Built production
+                projects alongside coursework.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot">🚀</div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">OCT 2025</div>
+              <div class="timeline-title">Launched CollegePrep</div>
+              <div class="timeline-desc">Shipped a full educational platform. Reached 1700+ active users and 1000+
+                WhatsApp channel followers within weeks.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot">🏆</div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">FEB 2026</div>
+              <div class="timeline-title">National Hackathon Finalist + 2 More Products</div>
+              <div class="timeline-desc">Top 5 at CTRL+SPACE Hackathon. Shipped Pro Compiler and QuickBill POS. Leading
+                3000+ student community.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ IMPACT ═══════════════════════════════ -->
+  <section id="impact" class="section" aria-label="Impact statistics">
+    <div class="container">
+      <div class="section-label reveal">Real-World Impact</div>
+      <h2 class="section-title reveal">Numbers that <span class="gradient-text">matter.</span></h2>
+      <p class="reveal" style="max-width:560px;margin-bottom:var(--space-2xl)">These aren't side projects. These are
+        production platforms serving real users, built and maintained by one engineer with a focus on usability and
+        scale.</p>
+      <div class="impact-grid">
+        <div class="impact-card reveal delay-1">
+          <span class="impact-icon">👥</span>
+          <div class="impact-number" data-count="1700" data-suffix="+">0</div>
+          <div class="impact-label">Active users on CollegePrep platform</div>
+        </div>
+        <div class="impact-card reveal delay-2">
+          <span class="impact-icon">📢</span>
+          <div class="impact-number" data-count="3000" data-suffix="+">0</div>
+          <div class="impact-label">Student followers across WhatsApp communities</div>
+        </div>
+        <div class="impact-card reveal delay-3">
+          <span class="impact-icon">📦</span>
+          <div class="impact-number" data-count="3">0</div>
+          <div class="impact-label">Production-grade products shipped & live</div>
+        </div>
+        <div class="impact-card reveal delay-4">
+          <span class="impact-icon">🥇</span>
+          <div class="impact-number" style="font-size:2.2rem">Top 5</div>
+          <div class="impact-label">National finalist — CTRL+SPACE Hackathon</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CASE STUDIES ═══════════════════════════════ -->
+  <section id="work" class="section" aria-label="Case studies">
+    <div class="container">
+      <div class="section-label reveal">Case Studies</div>
+      <h2 class="section-title reveal">Products I've <span class="gradient-text">shipped.</span></h2>
+      <p class="reveal" style="max-width:600px;margin-bottom:var(--space-2xl)">Each project below is a full UX +
+        engineering case study — from the user problem to the design decision to the measurable outcome.</p>
+
+      <div class="case-studies">
+
+        <!-- ── CASE STUDY 1: CollegePrep ── -->
+        <article class="case-study reveal" aria-label="CollegePrep case study">
+          <div class="cs-header">
+            <div class="cs-header-text">
+              <div class="cs-number">CASE STUDY 01</div>
+              <h3 class="cs-title">CollegePrep</h3>
+              <p class="cs-tagline">An educational hub that eliminated academic chaos for 1700+ engineering students.
+              </p>
+              <div class="cs-tech">
+                <span class="tag tag-violet">HTML</span>
+                <span class="tag tag-cyan">CSS</span>
+                <span class="tag tag-violet">JavaScript</span>
+                <span class="tag tag-neutral">SQL</span>
+              </div>
+            </div>
+            <div class="cs-header-visual cp-visual">
+              <div class="cs-visual-bg" style="padding:0;">
+                <div class="cs-screenshot-wrap">
+                  <img src="assets/collegeprep.png" alt="CollegePrep Platform Screenshot" class="cs-screenshot">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-body">
+            <div class="cs-sections">
+              <div class="cs-section-block">
+                <div class="cs-section-label">The Problem</div>
+                <div class="cs-section-title">Academic information was scattered everywhere</div>
+                <div class="cs-section-text">Students juggled between Google Docs, Telegram, YouTube, and WhatsApp to
+                  find notes, track attendance, and calculate GPAs. No single source of truth. High cognitive overhead
+                  during exam season.</div>
+              </div>
+              <div class="cs-section-block">
+                <div class="cs-section-label">Target Users</div>
+                <div class="cs-section-title">Engineering students at Vellore Institute of Technology</div>
+                <div class="cs-section-text">First to final year B.Tech students — primarily mobile-first, high exam
+                  pressure, limited time. They needed a fast, organized, always-available academic resource hub.</div>
+              </div>
+              <div class="cs-section-block">
+                <div class="cs-section-label">Key Design Decisions</div>
+                <div class="cs-section-title">Reduce friction at every touchpoint</div>
+                <div class="cs-section-text">Centralized notes + video embeds eliminate tab-switching.
+                  GPA/CGPA/Attendance calculators built-in to reduce anxiety. Responsive UI ensures mobile-first access
+                  during study sessions anywhere.</div>
+              </div>
+            </div>
+
+            <div class="cs-insights">
+              <div class="cs-insight">
+                <div class="cs-insight-label">UX Insight</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Academic calculators as
+                    anxiety-reducers.</strong> Students obsessed over "will I pass?" — embedding GPA/Attendance calcs
+                  directly on the platform turned fear into action and drove daily active use.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">Engineering Decision</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">WhatsApp channel as a
+                    notification layer.</strong> Instead of building a notification system, I leveraged WhatsApp's
+                  existing infrastructure — reaching 1000+ subscribers instantly, zero friction for users.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">Information Architecture</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Subject → Topic → Resource
+                    hierarchy.</strong> Structured navigation mirrors how students actually think about their
+                  coursework, reducing time-to-content from minutes to seconds.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">Accessibility</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Mobile-first, low-bandwidth
+                    aware.</strong> Platform works on 2G/3G connections common in campus areas. Lightweight embeds with
+                  fallback text ensure no student is left behind.</div>
+              </div>
+            </div>
+
+            <div class="cs-outcomes" style="margin-top:var(--space-xl)">
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">1700+</div>
+                <div class="cs-outcome-label">Active users</div>
+              </div>
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">1K+</div>
+                <div class="cs-outcome-label">Channel followers</div>
+              </div>
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">3K+</div>
+                <div class="cs-outcome-label">Community reach</div>
+              </div>
+            </div>
+
+            <div class="cs-link-row">
+              <a href="https://github.com/syedjavid188" target="_blank" rel="noopener" class="btn btn-outline"
+                style="padding:10px 20px;font-size:0.85rem;">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CASE STUDY 2: Pro Online Compiler ── -->
+        <article class="case-study reveal" aria-label="Pro Online Compiler case study">
+          <div class="cs-header">
+            <div class="cs-header-text">
+              <div class="cs-number">CASE STUDY 02</div>
+              <h3 class="cs-title">Pro Online Compiler</h3>
+              <p class="cs-tagline">A VS Code-like web IDE built for students who want a real coding environment without
+                setup.</p>
+              <div class="cs-tech">
+                <span class="tag tag-green">Monaco Editor</span>
+                <span class="tag tag-cyan">JavaScript</span>
+                <span class="tag tag-violet">REST API</span>
+                <span class="tag tag-neutral">HTML/CSS</span>
+              </div>
+            </div>
+            <div class="cs-header-visual compiler-visual">
+              <div class="cs-visual-bg" style="padding:0;">
+                <div class="cs-screenshot-wrap">
+                  <img src="assets/compiler.png" alt="Pro Online Compiler Screenshot" class="cs-screenshot">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-body">
+            <div class="cs-sections">
+              <div class="cs-section-block">
+                <div class="cs-section-label">The Problem</div>
+                <div class="cs-section-title">Online compilers felt limited and unfamiliar</div>
+                <div class="cs-section-text">Most online compilers are single-file, lack themes, have ugly UIs, and bear
+                  no resemblance to real dev environments. Students using them break their flow — the tool gets in the
+                  way of thinking.</div>
+              </div>
+              <div class="cs-section-block">
+                <div class="cs-section-label">Target Users</div>
+                <div class="cs-section-title">CS students practicing coding problems</div>
+                <div class="cs-section-text">Students preparing for placements and assignments who know VS Code but
+                  can't install it in a lab or mobile context. They need familiarity, speed, and zero-setup.</div>
+              </div>
+              <div class="cs-section-block">
+                <div class="cs-section-label">Key Design Decisions</div>
+                <div class="cs-section-title">Borrow VS Code's mental model exactly</div>
+                <div class="cs-section-text">Multi-file tabs reduce context switching. Monaco Editor provides identical
+                  autocomplete and keybindings. Theme switching (dark/light) respects user preference. Download/copy
+                  features complete the "real editor" feel.</div>
+              </div>
+            </div>
+
+            <div class="cs-insights">
+              <div class="cs-insight">
+                <div class="cs-insight-label">UX Research Assumption</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Muscle memory matters.</strong>
+                  Students who've used VS Code for months have deep keybinding habits. Using Monaco Editor eliminated
+                  the re-learning curve and removed cognitive load instantly.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">Critical Feature</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Multi-tab management.</strong>
+                  Real projects aren't single files. Supporting multiple open files mirrors real engineering workflows
+                  and makes the tool usable for actual assignments — not just snippets.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">Accessibility</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Keyboard-first design.</strong>
+                  Every action accessible via keyboard. Theme toggle, run shortcut, and copy/download built for power
+                  users who hate reaching for the mouse.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">Technical UX</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Real-time execution via
+                    API.</strong> Code execution feels instant — leveraging a backend API for real language support
+                  without user-perceived latency for typical problem sizes.</div>
+              </div>
+            </div>
+
+            <div class="cs-outcomes" style="margin-top:var(--space-xl)">
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">5+</div>
+                <div class="cs-outcome-label">Languages supported</div>
+              </div>
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">2</div>
+                <div class="cs-outcome-label">Editor themes</div>
+              </div>
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">∞</div>
+                <div class="cs-outcome-label">File tabs supported</div>
+              </div>
+            </div>
+
+            <div class="cs-link-row">
+              <a href="https://github.com/syedjavid188" target="_blank" rel="noopener" class="btn btn-outline"
+                style="padding:10px 20px;font-size:0.85rem;">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CASE STUDY 3: QuickBill POS ── -->
+        <article class="case-study reveal" aria-label="QuickBill POS case study">
+          <div class="cs-header">
+            <div class="cs-header-text">
+              <div class="cs-number">CASE STUDY 03</div>
+              <h3 class="cs-title">QuickBill POS</h3>
+              <p class="cs-tagline">A complete billing system that digitized small retail shops — from paper receipts to
+                UPI QR payments.</p>
+              <div class="cs-tech">
+                <span class="tag tag-violet">HTML/CSS</span>
+                <span class="tag tag-cyan">JavaScript</span>
+                <span class="tag tag-green">LocalStorage</span>
+                <span class="tag tag-neutral">QR API</span>
+              </div>
+            </div>
+            <div class="cs-header-visual pos-visual">
+              <div class="cs-visual-bg" style="padding:0;">
+                <div class="cs-screenshot-wrap">
+                  <img src="assets/quickbill.png" alt="QuickBill POS Screenshot" class="cs-screenshot">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-body">
+            <div class="cs-sections">
+              <div class="cs-section-block">
+                <div class="cs-section-label">The Problem</div>
+                <div class="cs-section-title">Small shops were stuck with paper bills and mental math</div>
+                <div class="cs-section-text">Small retail and service shop owners had zero digital billing
+                  infrastructure. Paper receipts were mislaid, there was no sales history, inventory was tracked in
+                  notebooks. Returns and discounts created manual errors.</div>
+              </div>
+              <div class="cs-section-block">
+                <div class="cs-section-label">Target Users</div>
+                <div class="cs-section-title">Non-tech-savvy small business owners</div>
+                <div class="cs-section-text">Shop owners aged 30–60 with minimal digital literacy. Design had to be
+                  super-intuitive — no training required. Every interaction needed to work on a basic Android phone in a
+                  busy shop environment.</div>
+              </div>
+              <div class="cs-section-block">
+                <div class="cs-section-label">Key Design Decisions</div>
+                <div class="cs-section-title">One-tap flow for every critical action</div>
+                <div class="cs-section-text">Add item → auto-calculate total → generate UPI QR → share bill via
+                  WhatsApp. The entire billing flow designed to be completed in under 30 seconds with zero technical
+                  knowledge.</div>
+              </div>
+            </div>
+
+            <div class="cs-insights">
+              <div class="cs-insight">
+                <div class="cs-insight-label">Killer UX Feature</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">WhatsApp bill sharing = zero
+                    friction for customers.</strong> Customers don't need to install any app. A bill comes to them on
+                  WhatsApp — a platform already on every phone. This insight removed the biggest adoption barrier.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">Engineering Decision</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">LocalStorage for offline-first
+                    resilience.</strong> Small shops have unreliable internet. Using LocalStorage ensures sales data and
+                  inventory persist even when connectivity drops — no cloud dependency needed.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">UPI QR Integration</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Auto-generated payment QR per
+                    transaction.</strong> QR code generated dynamically with the exact bill amount. Eliminates manual
+                  UPI amount entry errors — a major pain point in small shop transactions.</div>
+              </div>
+              <div class="cs-insight">
+                <div class="cs-insight-label">User Research Assumption</div>
+                <div class="cs-insight-text"><strong style="color:var(--text-primary)">Digital literacy is low; trust in
+                    paper is high.</strong> Added printable bill functionality to bridge the trust gap — owners could
+                  still hand customers a physical receipt while operating digitally behind the scenes.</div>
+              </div>
+            </div>
+
+            <div class="cs-outcomes" style="margin-top:var(--space-xl)">
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">&lt;30s</div>
+                <div class="cs-outcome-label">Full billing flow</div>
+              </div>
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">0</div>
+                <div class="cs-outcome-label">App downloads for customer</div>
+              </div>
+              <div class="cs-outcome">
+                <div class="cs-outcome-val">100%</div>
+                <div class="cs-outcome-label">Offline resilient</div>
+              </div>
+            </div>
+
+            <div class="cs-link-row">
+              <a href="https://github.com/syedjavid188" target="_blank" rel="noopener" class="btn btn-outline"
+                style="padding:10px 20px;font-size:0.85rem;">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
+  <section id="skills" class="section" aria-label="Skills">
+    <div class="container">
+      <div class="section-label reveal">Technical Arsenal</div>
+      <h2 class="section-title reveal">Skills &amp; <span class="gradient-text">Stack.</span></h2>
+      <div class="skills-grid" style="margin-top:var(--space-2xl)">
+        <div class="skill-group reveal delay-1">
+          <div class="skill-group-header">
+            <div class="skill-group-icon icon-violet">⚡</div>
+            <div class="skill-group-name">Frontend Engineering</div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-violet">HTML5</span>
+            <span class="tag tag-violet">CSS3</span>
+            <span class="tag tag-violet">JavaScript (ES6+)</span>
+            <span class="tag tag-violet">Responsive Design</span>
+            <span class="tag tag-violet">REST APIs</span>
+            <span class="tag tag-violet">Monaco Editor</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-2">
+          <div class="skill-group-header">
+            <div class="skill-group-icon icon-cyan">🐍</div>
+            <div class="skill-group-name">Backend &amp; Data</div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-cyan">Python</span>
+            <span class="tag tag-cyan">C / C++</span>
+            <span class="tag tag-cyan">Java</span>
+            <span class="tag tag-cyan">SQL / MySQL</span>
+            <span class="tag tag-cyan">NumPy</span>
+            <span class="tag tag-cyan">Pandas</span>
+            <span class="tag tag-cyan">Scikit-Learn</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-3">
+          <div class="skill-group-header">
+            <div class="skill-group-icon icon-green">🛠</div>
+            <div class="skill-group-name">Developer Tools</div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-green">Git &amp; GitHub</span>
+            <span class="tag tag-green">VS Code</span>
+            <span class="tag tag-green">PyCharm</span>
+            <span class="tag tag-green">IntelliJ IDEA</span>
+            <span class="tag tag-green">Jupyter Notebook</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-4">
+          <div class="skill-group-header">
+            <div class="skill-group-icon icon-neutral">🧠</div>
+            <div class="skill-group-name">CS Fundamentals &amp; Soft Skills</div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-neutral">Data Structures &amp; Algorithms</span>
+            <span class="tag tag-neutral">OOP</span>
+            <span class="tag tag-neutral">Machine Learning</span>
+            <span class="tag tag-neutral">DBMS</span>
+            <span class="tag tag-neutral">Leadership</span>
+            <span class="tag tag-neutral">Community Building</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ACHIEVEMENTS ═══════════════════════════════ -->
+  <section id="achievements" class="section" aria-label="Achievements">
+    <div class="container">
+      <div class="section-label reveal">Recognition</div>
+      <h2 class="section-title reveal">Achievements &amp; <span class="gradient-text">Certifications.</span></h2>
+      <div class="achievements-grid" style="margin-top:var(--space-2xl)">
+        <div class="hackathon-card reveal-left">
+          <div class="hackathon-title">National Finalist</div>
+          <div style="font-size:1.4rem;font-weight:800;color:var(--accent-cyan);margin:var(--space-sm) 0;">CTRL+SPACE
+            Hackathon</div>
+          <div class="hackathon-sub">Newton School of Technology<br><br>Team VOID — Ranked <strong
+              style="color:var(--accent-violet)">Top 5 Nationwide</strong> out of hundreds of teams across India.</div>
+          <div style="margin-top:var(--space-lg)"><span class="tag tag-violet">Competitive</span> <span
+              class="tag tag-cyan">National Level</span> <span class="tag tag-green">Top 5</span></div>
+        </div>
+
+        <div class="certs-grid reveal-right">
+          <div class="cert-card">
+            <div class="cert-icon icon-violet">📊</div>
+            <div>
+              <div class="cert-name">Mastering Data Structures &amp; Algorithms</div>
+              <div class="cert-provider">Udemy</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon icon-cyan">☕</div>
+            <div>
+              <div class="cert-name">Java Programming</div>
+              <div class="cert-provider">Coursera</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon icon-violet">🌐</div>
+            <div>
+              <div class="cert-name">Web Development</div>
+              <div class="cert-provider">Coursera</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon icon-green">📱</div>
+            <div>
+              <div class="cert-name">Android Development</div>
+              <div class="cert-provider">Udemy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section id="contact" class="section" aria-label="Contact">
+    <div class="container">
+      <div class="section-label reveal" style="justify-content:center">Let's Connect</div>
+      <h2 class="contact-heading reveal gradient-text">Let's build something<br>users love.</h2>
+      <p class="contact-sub reveal">I'm actively looking for internship and full-time opportunities. If you're building
+        something that needs product thinking + strong engineering, let's talk.</p>
+
+      <div class="contact-links reveal">
+        <a href="mailto:syedjavid188@gmail.com" class="contact-link-card" aria-label="Email Syed Javid">
+          <div class="contact-link-icon icon-violet">✉️</div>
+          <div class="contact-link-label">Email</div>
+          <div class="contact-link-value">syedjavid188@gmail.com</div>
+        </a>
+        <a href="https://linkedin.com/in" target="_blank" rel="noopener" class="contact-link-card"
+          aria-label="LinkedIn profile">
+          <div class="contact-link-icon icon-cyan">💼</div>
+          <div class="contact-link-label">LinkedIn</div>
+          <div class="contact-link-value">linkedin.com/in/syedjavid</div>
+        </a>
+        <a href="https://github.com/syedjavid188" target="_blank" rel="noopener" class="contact-link-card"
+          aria-label="GitHub profile">
+          <div class="contact-link-icon icon-green">💻</div>
+          <div class="contact-link-label">GitHub</div>
+          <div class="contact-link-value">github.com/syedjavid188</div>
+        </a>
+        <a href="tel:+917330767615" class="contact-link-card" aria-label="Phone">
+          <div class="contact-link-icon icon-neutral">📞</div>
+          <div class="contact-link-label">Phone</div>
+          <div class="contact-link-value">+91 7330767615</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-copy">© 2026 Syed Javid · Designed &amp; Built with ❤️ for real users</div>
+      <div class="footer-links">
+        <a href="#hero">Back to top ↑</a>
+        <a href="mailto:syedjavid188@gmail.com">Email</a>
+        <a href="https://github.com/syedjavid188" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
